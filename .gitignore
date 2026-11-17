@@ -1,0 +1,62 @@
+*.log
+.DS_Store
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+Homestead.json
+Homestead.yaml
+Thumbs.db
+
+# 案件固有
+/_archive/
+/_scaffold/
+
+# ------------------------------------------------------------
+# サーバー反映時に動作に関係しないもの（D-035。2026-11-17）
+# このリポジトリはサーバー（peudecouleur.xsrv.jp/steps）への反映専用。
+# 開発・テスト・ビルド元・資料の正本はローカルの作業フォルダ。
+# アセットは手元でビルドし public/build を tar で送る（/public/build は上で除外済み）。
+# ------------------------------------------------------------
+# エージェント・作業用
+/.claude/
+/_apply/
+/CLAUDE.md
+# 資料
+/docs/
+/README.md
+/CHANGELOG.md
+# 開発環境（Docker）
+/docker/
+/compose.yaml
+# テスト・整形・エディタ設定
+/tests/
+/phpunit.xml
+/pint.json
+/.editorconfig
+# フロントのビルド元（ビルド済みの public/build だけを使う）
+/resources/css/
+/resources/js/
+/package.json
+/package-lock.json
+/vite.config.js
+/tailwind.config.js
+/postcss.config.js
+# テストデータ（seed は実行しない。Factory は tests からのみ使う）
+/database/factories/
+/database/seeders/
