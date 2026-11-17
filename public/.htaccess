@@ -29,3 +29,13 @@
 <IfModule mod_headers.c>
     Header always set X-Robots-Tag "noindex, nofollow"
 </IfModule>
+
+# D-036 PWA：マニフェストの MIME（nosniff 下で正しく読ませるため）と、Service Worker・マニフェストを毎回確認させる
+<IfModule mod_mime.c>
+    AddType application/manifest+json .webmanifest
+</IfModule>
+<IfModule mod_headers.c>
+    <FilesMatch "^(sw\.js|manifest\.webmanifest)$">
+        Header set Cache-Control "no-cache"
+    </FilesMatch>
+</IfModule>
